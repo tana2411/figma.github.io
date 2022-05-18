@@ -90,11 +90,12 @@
                 font-size: 1rem;
                 border: 1px solid;
                 color: #fff;
-                background: linear-gradient(90.12deg, #F8179E 0.11%, rgba(248, 91, 23, 0.52) 97.84%);
+                background: linear-gradient(270.25deg, #f85b17 .44%, #f8189d 100.03%);
                 width: 140px;
                 height: 50px;
                 border-radius: 8px;
                 margin-top: 30px;
+                border: white;
             }
 
             .banner--icon {
@@ -247,6 +248,17 @@
             }
         }
 
+    }
+
+    button {
+        border: white;
+        color: white;
+        font-size: 1.25rem;
+        padding: 15px;
+        border-radius: 10px;
+        margin: auto;
+        display: block;
+        background: linear-gradient(270.25deg, #f85b17 .44%, #f8189d 100.03%);
     }
 }
 
@@ -547,8 +559,10 @@
 }
 
 .section7 {
-    background-color: blue;
+    background-image: linear-gradient(rgba(0, 0, 0, .527), rgba(0, 0, 0, .5)), url(./image/bgcSection8.5a4270d472255c5d3396.jpg);
     padding-bottom: 5rem;
+    background-size: cover;
+    background-position: center;
 
     .s7__flex {
         display: flex;
@@ -618,12 +632,14 @@
         }
 
         .ft--item2 {
+            flex-wrap: wrap;
             display: flex;
             width: 800px;
             justify-content: space-between;
             max-width: 90%;
 
             .ft--it2--flex {
+                margin: 0 10px;
                 justify-content: space-evenly;
 
                 display: flex;
@@ -653,7 +669,7 @@
 
     .banner {
         .banner__flex {
-            flex-direction: column;
+            flex-direction: column-reverse;
 
             .banner__item1 {
                 text-align: center;
@@ -707,11 +723,11 @@
 
                 .s1__it2--img {
                     margin: 35px auto 0 auto;
-                    flex-direction: column;
                     align-items: center;
+                    justify-content: center;
 
                     img {
-                        margin-top: 10px;
+                        margin: 5px 3px;
                     }
                 }
             }
@@ -728,6 +744,7 @@
         .s2__flex {
             flex-direction: column;
             align-items: center;
+            margin-bottom: 30px;
 
             .s2--item {
                 max-width: 90%;
@@ -743,8 +760,8 @@
         .s3__flex {
 
             flex-direction: column;
-            padding: 0 20px;
-            box-sizing: border-box;
+            padding: 0;
+
 
             .s3__item1 {
                 padding: 0;
@@ -860,7 +877,7 @@
 
     .banner {
         .banner__flex {
-            flex-direction: column;
+            flex-direction: column-reverse;
 
             .banner__item1 {
                 p {
@@ -894,7 +911,7 @@
     }
 
     .section2 {
-        padding-bottom: 20px;
+        padding-bottom: 80px;
 
         h2 {
             font-size: 3rem;
@@ -904,6 +921,8 @@
 
     .section3 {
         .s3__flex {
+
+
             .s3__item2 {
                 .s3--box2 {
                     margin: 40px auto 0 auto;
@@ -946,11 +965,42 @@
 }
 
 @media screen and (max-width:400px) {
+    .section1 {
+        padding-bottom: 30px;
+
+        .s1__flex {
+            .s1__item2 {
+                padding: 20px 0;
+
+                h2 {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+    }
+
+    .section2 {
+        h2 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+        }
+    }
+
     .section3 {
+
+
         .s3__flex {
             .s3__item1 {
                 img {
                     width: 100%;
+                }
+            }
+
+            .s3__item2 {
+                .s3__text {
+                    h4 {
+                        font-size: 2rem;
+                    }
                 }
             }
         }

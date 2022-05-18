@@ -101,11 +101,12 @@
   font-size: 1rem;
   border: 1px solid;
   color: #fff;
-  background: linear-gradient(90.12deg, #F8179E 0.11%, rgba(248, 91, 23, 0.52) 97.84%);
+  background: linear-gradient(270.25deg, #f85b17 0.44%, #f8189d 100.03%);
   width: 140px;
   height: 50px;
   border-radius: 8px;
   margin-top: 30px;
+  border: white;
 }
 .banner .banner__flex .banner__item1 .banner--icon {
   display: -webkit-box;
@@ -252,6 +253,16 @@
 .section2 .s2__flex .s2--item .s2--text {
   font-family: cursive;
   font-weight: 600;
+}
+.section2 button {
+  border: white;
+  color: white;
+  font-size: 1.25rem;
+  padding: 15px;
+  border-radius: 10px;
+  margin: auto;
+  display: block;
+  background: linear-gradient(270.25deg, #f85b17 0.44%, #f8189d 100.03%);
 }
 
 .section3 {
@@ -521,8 +532,11 @@
 }
 
 .section7 {
-  background-color: blue;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.527)), to(rgba(0, 0, 0, 0.5))), url(./image/bgcSection8.5a4270d472255c5d3396.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(./image/bgcSection8.5a4270d472255c5d3396.jpg);
   padding-bottom: 5rem;
+  background-size: cover;
+  background-position: center;
 }
 .section7 .s7__flex {
   display: -webkit-box;
@@ -594,6 +608,8 @@
   max-width: 100%;
 }
 .footer .ft__flex .ft--item2 {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -604,6 +620,7 @@
   max-width: 90%;
 }
 .footer .ft__flex .ft--item2 .ft--it2--flex {
+  margin: 0 10px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -630,9 +647,9 @@
 
   .banner .banner__flex {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .banner .banner__flex .banner__item1 {
     text-align: center;
@@ -677,16 +694,15 @@
   }
   .section1 .s1__flex .s1__item2 .s1__it2--img {
     margin: 35px auto 0 auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .section1 .s1__flex .s1__item2 .s1__it2--img img {
-    margin-top: 10px;
+    margin: 5px 3px;
   }
 
   .section2 {
@@ -703,6 +719,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-bottom: 30px;
   }
   .section2 .s2__flex .s2--item {
     max-width: 90%;
@@ -716,9 +733,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 0 20px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    padding: 0;
   }
   .section3 .s3__flex .s3__item1 {
     padding: 0;
@@ -813,9 +828,9 @@
 
   .banner .banner__flex {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .banner .banner__flex .banner__item1 {
     width: 70%;
@@ -838,7 +853,7 @@
   }
 
   .section2 {
-    padding-bottom: 20px;
+    padding-bottom: 80px;
   }
   .section2 h2 {
     font-size: 3rem;
@@ -866,7 +881,25 @@
   }
 }
 @media screen and (max-width: 400px) {
+  .section1 {
+    padding-bottom: 30px;
+  }
+  .section1 .s1__flex .s1__item2 {
+    padding: 20px 0;
+  }
+  .section1 .s1__flex .s1__item2 h2 {
+    font-size: 1.75rem;
+  }
+
+  .section2 h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+  }
+
   .section3 .s3__flex .s3__item1 img {
     width: 100%;
+  }
+  .section3 .s3__flex .s3__item2 .s3__text h4 {
+    font-size: 2rem;
   }
 }
