@@ -876,6 +876,10 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 40px !important;
   }
   .section6 .s6__line .s6__flex .s6--item1 .s6--element .elm--box {
     width: 38px;
@@ -1028,21 +1032,6 @@
   .section1 .s1__flex .s1__item2 h2 {
     font-size: 1.75rem;
   }
-  .section1 .section6 {
-    padding-bottom: 100px;
-  }
-  .section1 .section6 .s6__text h2 {
-    font-size: 1.5rem;
-  }
-  .section1 .section6 .s6__text p {
-    font: 0.75rem;
-  }
-  .section1 .section6 .s6__line {
-    padding-bottom: 250px;
-  }
-  .section1 .section6 .s6__img {
-    display: none !important;
-  }
 
   .section2 h2 {
     margin: 10px 0;
@@ -1054,6 +1043,27 @@
   }
   .section3 .s3__flex .s3__item2 .s3__text h4 {
     font-size: 2rem;
+  }
+
+  .section6 {
+    padding-bottom: 100px;
+  }
+  .section6 .s6__text {
+    max-width: 90% !important;
+  }
+  .section6 .s6__text h2 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+  .section6 .s6__text p {
+    font-size: 1rem;
+    line-height: 20px;
+  }
+  .section6 .s6__line {
+    padding-bottom: 250px;
+  }
+  .section6 .s6__img {
+    display: none !important;
   }
 }
 @media screen and (min-width: 1301px) and (max-width: 1450px) {
