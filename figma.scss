@@ -1017,18 +1017,22 @@
 
             .banner__item1 {
                 p {
+                    text-align: center;
                     font-size: 2rem;
                     line-height: 50px;
                 }
 
-                width: 70%;
+                width: 90%;
                 margin-bottom: 30px;
 
                 h1 {
                     text-align: center;
                 }
 
-                button {}
+                button {
+                    margin: 30px auto 0 auto;
+                    display: block;
+                }
 
                 .banner--icon {
                     width: 100%
