@@ -12,28 +12,66 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
     <title>figma</title>
+
 </head>
 
 <body>
+    <div id="overlay"></div>
     <div class="header">
         <div class="header__item">
             <img src="./image/AllDay_Logo 2.png">
             <div class="header__menu">
-                <h5>Download</h5>
-                <h5>News</h5>
-                <h5>Gameplay</h5>
-                <h5>NFT</h5>
-                <h5>Team</h5>
-                <h5>Roadmap</h5>
-                <h5>Whitepaper</h5>
+                <h5><a href="#Download">Download</a></h5>
+                <h5><a href="#News">News</a></h5>
+                <h5><a href="#Gameplay">Gameplay</a></h5>
+                <h5><a href="#NFT">NFT</a></h5>
+                <h5><a href="#Team">Team</a></h5>
+                <h5><a href="#Roadmap">Roadmap</a></h5>
+                <h5><a href="#Writepaper">Whitepaper</a></h5>
             </div>
         </div>
         <button class="header--button">
             <img src="./image/Vector (2).png">
             <h5> Market Place</h5>
         </button>
+        <div id="navbar-toggle">
+        </div>
+
     </div>
-    </svg>
+    <div id="mySidenav">
+        <ul>
+            <li> <a href="#Download">Download</a></li>
+            <li> <a href="#News">News</a></li>
+            <li> <a href="#Gameplay">Gameplay</a>
+            </li>
+            <li> <a href="#NFT">NFT</a></li>
+            <li><a href="#Team">Team</a></li>
+            <li> <a href="#Roadmap">Roadmap</a></li>
+            <li> <a href="#Writepaper">Whitepaper</a>
+            </li>
+            <li> <button class="header--button">
+                    <img src="./image/Vector (2).png">
+                    <h5> Market Place</h5>
+                </button></li>
+        </ul>
+
+
+
+    </div>
+    <script>
+        var navbar_toggle = document.getElementById("navbar-toggle");
+        var menu_open = document.getElementById("mySidenav");
+        var overlay = document.getElementById("overlay");
+        navbar_toggle.onclick = function () {
+            navbar_toggle.classList.toggle('open');
+            menu_open.classList.toggle('openmenu');
+            overlay.classList.toggle('on');
+        }
+
+
+    </script>
+
+
     <div class="banner">
         <div class="banner__flex">
             <div class="banner__item1">
@@ -63,7 +101,7 @@
         </div>
 
     </div>
-    <div class="section1">
+    <div class="section1" id="Download">
         <div class="cloud"><img src="./image/cloud.png" alt=""></div>
         <div class="s1__flex">
             <div class="s1__item1">
@@ -82,7 +120,7 @@
             </div>
         </div>
     </div>
-    <div class="section2">
+    <div class="section2" id="News">
         <div class="cloud"><img src="./image/cloud.png" alt=""></div>
         <h2>IN GAME ACTIVITIES AND COMMUNITY EVENTS</h2>
         <div class="s2__flex">
@@ -110,7 +148,7 @@
         </div>
         <button>MORE EVENTS</button>
     </div>
-    <div class="section3">
+    <div class="section3" id="Gameplay">
         <div class="cloud"><img src="./image/cloud.png" alt=""></div>
         <div class="s3__flex">
             <div class="s3__item1"> <img src="./image/person4.png" class="pr4">
@@ -145,7 +183,7 @@
         </div>
     </div>
 
-    <div class="section4">
+    <div class="section4" id="NFT">
         <div class="cloud"><img src="./image/cloud.png" alt=""></div>
         <h3>Diversified NFT Items...</h3>
         <div class="s4__flex">
@@ -228,7 +266,7 @@
         </button>
     </div>
 
-    <div class="section5">
+    <div class="section5" id="Team">
         <div class="cloud"><img src="./image/cloud.png" alt=""></div>
 
         <h3>Team</h3>
@@ -282,7 +320,7 @@
             <img src="./image/right.png" alt="">
         </div>
     </div>
-    <div class="section6">
+    <div class="section6" id="Roadmap">
         <div class="cloud"><img src="./image/cloud.png" alt=""></div>
         <div class="s6__text">
             <h2>Multiplayer Social-Network game</h2>
@@ -399,7 +437,7 @@
 
 
 
-    <div class="section7">
+    <div class="section7" id="Writepaper">
         <div class="cloud"><img src="./image/cloud.png" alt=""></div>
 
         <div class="s7__flex">

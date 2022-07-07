@@ -1,10 +1,34 @@
 * {
+  scroll-behavior: smooth;
   font-family: "Titan One", cursive;
   margin: 0;
   padding: 0;
 }
 
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#overlay.on {
+  display: block;
+}
+
 .header {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 1000;
+  position: fixed;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -38,6 +62,10 @@
   display: flex;
   align-items: center;
 }
+.header .header__item .header__menu a {
+  color: white;
+  text-decoration: none;
+}
 .header .header__item h5 {
   font-family: monospace;
   font-size: 1.05rem;
@@ -64,11 +92,91 @@
   color: black;
   font-size: 0.8rem;
 }
+.header #navbar-toggle {
+  display: none;
+  background-image: url(./image/open-icon.png);
+  color: white;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.header #navbar-toggle.open {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background-image: url(./image/close-icon.png);
+}
+
+#mySidenav {
+  overflow: hidden;
+  -webkit-transform: translate(-250px, 68px);
+          transform: translate(-250px, 68px);
+  z-index: 2;
+  width: 250px;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+#mySidenav ul {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#mySidenav ul li {
+  margin: 20px;
+  text-decoration: none;
+}
+#mySidenav ul li a {
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+}
+#mySidenav ul .header--button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #ffcb31;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#mySidenav ul .header--button h5 {
+  font-family: monospace;
+  margin: 0 5px;
+  color: black;
+  font-size: 0.8rem;
+}
+
+#mySidenav.openmenu {
+  width: 250px;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  -webkit-transform: translate(0px, 68px);
+          transform: translate(0px, 68px);
+}
 
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 54px 0px;
+  padding: 100px 0px;
   background-image: url(./image/background1.png);
 }
 .banner .banner__flex {
@@ -748,6 +856,14 @@
   .header .header__item .header__menu {
     display: none;
   }
+  .header .header--button {
+    display: none;
+  }
+  .header #navbar-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 
   .banner .banner__flex {
     -webkit-box-orient: vertical;
@@ -1028,6 +1144,10 @@
   }
 }
 @media screen and (max-width: 400px) {
+  #menu-open {
+    width: 100%;
+  }
+
   .section1 {
     padding-bottom: 30px;
   }
