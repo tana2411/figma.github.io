@@ -295,7 +295,7 @@
 }
 .section1 .s1__flex .s1__item2 {
   width: 50%;
-  color: white;
+  color: red;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 82px;
