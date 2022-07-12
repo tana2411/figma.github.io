@@ -58,19 +58,6 @@
 
 
     </div>
-    <script>
-        var navbar_toggle = document.getElementById("navbar-toggle");
-        var menu_open = document.getElementById("mySidenav");
-        var overlay = document.getElementById("overlay");
-        navbar_toggle.onclick = function () {
-            navbar_toggle.classList.toggle('open');
-            menu_open.classList.toggle('openmenu');
-            overlay.classList.toggle('on');
-        }
-
-
-    </script>
-
 
     <div class="banner">
         <div class="banner__flex">
@@ -492,6 +479,27 @@
             </div>
         </div>
     </div>
+    <script>
+        var navbar_toggle = document.getElementById("navbar-toggle");
+        var menu_open = document.getElementById("mySidenav");
+        var overlay = document.getElementById("overlay");
+        navbar_toggle.onclick = function () {
+            navbar_toggle.classList.toggle('open');
+            menu_open.classList.toggle('openmenu');
+            overlay.classList.toggle('on');
+        }
+        document.onclick = function (event) {
+            if (event.target.id !== 'mySidenav' && event.target.id !== 'navbar-toggle') {
+                navbar_toggle.classList.remove('open');
+                menu_open.classList.remove('openmenu');
+                overlay.classList.remove('on');
+            }
+        }
+
+    </script>
+
+
 </body>
+
 
 </html>

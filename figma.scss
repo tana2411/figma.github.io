@@ -213,9 +213,10 @@
             .banner--icon {
                 display: flex;
                 width: 70%;
-                align-items: flex-end;
+                align-items: stretch;
                 justify-content: space-between;
                 margin-top: 20px;
+                height: 32px;
             }
         }
 
