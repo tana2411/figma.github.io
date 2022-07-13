@@ -42,12 +42,27 @@
 
         display: flex;
 
-        .header__menu {
+        nav {
             align-items: center;
             justify-content: space-between;
             width: 700px;
             display: flex;
             align-items: center;
+            position: relative;
+
+            #marker {
+
+                position: absolute;
+                height: 4px;
+                left: 0;
+                width: 0;
+                background-color: white;
+                bottom: -10px;
+                transition: 0.5s;
+                border-radius: 4px;
+
+
+            }
 
             a {
                 color: white;
@@ -61,8 +76,20 @@
             font-family: monospace;
             font-size: 1.05rem;
             color: white;
-
+            position: relative;
         }
+
+        // h5.active::after {
+        //     position: absolute;
+        //     content: "";
+        //     height: 5px;
+        //     width: 100%;
+        //     background: white;
+        //     left: 0;
+        //     right: 0;
+        //     border-radius: 30px;
+        //     bottom: -12px;
+        // }
     }
 
     .header--button {
@@ -120,41 +147,46 @@
     transition: 0.25s ease-in-out;
 
     ul {
+
         justify-content: space-evenly;
         display: flex;
         flex-direction: column;
+    }
 
-        li {
-            margin: 20px;
+    li {
+        margin: 20px;
+        text-decoration: none;
+
+        a {
+            font-size: 25px;
+            color: white;
+
             text-decoration: none;
-
-            a {
-                font-size: 25px;
-                color: white;
-
-                text-decoration: none;
-            }
         }
 
-        .header--button {
-            display: flex;
-            background: #ffcb31;
-            width: 150px;
-            height: 40px;
-            border-radius: 20px;
-            justify-content: center;
-            align-items: center;
 
-            h5 {
-                font-family: monospace;
-                margin: 0 5px;
-                color: black;
-                font-size: 0.8rem;
-            }
+    }
 
 
 
+    .header--button {
+        display: flex;
+        background: #ffcb31;
+        width: 150px;
+        height: 40px;
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+
+        h5 {
+            font-family: monospace;
+            margin: 0 5px;
+            color: black;
+            font-size: 0.8rem;
         }
+
+
+
     }
 }
 
@@ -878,7 +910,7 @@
         padding: 10px 20px;
 
         .header__item {
-            .header__menu {
+            nav {
                 display: none;
             }
         }
@@ -1130,7 +1162,7 @@
         padding: 10px 20px;
 
         .header__item {
-            .header__menu {
+            nav {
                 display: none;
             }
         }

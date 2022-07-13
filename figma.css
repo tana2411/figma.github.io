@@ -49,7 +49,7 @@
 .header .header__item img {
   margin-right: 20px;
 }
-.header .header__item .header__menu {
+.header .header__item nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -61,8 +61,20 @@
   display: -ms-flexbox;
   display: flex;
   align-items: center;
+  position: relative;
 }
-.header .header__item .header__menu a {
+.header .header__item nav #marker {
+  position: absolute;
+  height: 4px;
+  left: 0;
+  width: 0;
+  background-color: white;
+  bottom: -10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 4px;
+}
+.header .header__item nav a {
   color: white;
   text-decoration: none;
 }
@@ -70,6 +82,7 @@
   font-family: monospace;
   font-size: 1.05rem;
   color: white;
+  position: relative;
 }
 .header .header--button {
   display: -webkit-box;
@@ -134,16 +147,16 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-#mySidenav ul li {
+#mySidenav li {
   margin: 20px;
   text-decoration: none;
 }
-#mySidenav ul li a {
+#mySidenav li a {
   font-size: 25px;
   color: white;
   text-decoration: none;
 }
-#mySidenav ul .header--button {
+#mySidenav .header--button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,7 +171,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-#mySidenav ul .header--button h5 {
+#mySidenav .header--button h5 {
   font-family: monospace;
   margin: 0 5px;
   color: black;
@@ -854,7 +867,7 @@
   .header {
     padding: 10px 20px;
   }
-  .header .header__item .header__menu {
+  .header .header__item nav {
     display: none;
   }
   .header .header--button {
@@ -1071,7 +1084,7 @@
   .header {
     padding: 10px 20px;
   }
-  .header .header__item .header__menu {
+  .header .header__item nav {
     display: none;
   }
 

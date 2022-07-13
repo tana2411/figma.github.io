@@ -20,15 +20,16 @@
     <div class="header">
         <div class="header__item">
             <img src="./image/AllDay_Logo 2.png">
-            <div class="header__menu">
-                <h5><a href="#Download">Download</a></h5>
-                <h5><a href="#News">News</a></h5>
-                <h5><a href="#Gameplay">Gameplay</a></h5>
-                <h5><a href="#NFT">NFT</a></h5>
-                <h5><a href="#Team">Team</a></h5>
-                <h5><a href="#Roadmap">Roadmap</a></h5>
-                <h5><a href="#Writepaper">Whitepaper</a></h5>
-            </div>
+            <nav>
+                <div id="marker"> </div> <a href="#Download">Download</a>
+                <a href="#News">News</a>
+                <a href="#Gameplay">Gameplay</a>
+                <a href="#NFT">NFT</a>
+                <a href="#Team">Team</a>
+                <a href="#Roadmap">Roadmap</a>
+                <a href="#Writepaper">Whitepaper</a>
+
+            </nav>
         </div>
         <button class="header--button">
             <img src="./image/Vector (2).png">
@@ -40,6 +41,7 @@
     </div>
     <div id="mySidenav">
         <ul>
+
             <li> <a href="#Download">Download</a></li>
             <li> <a href="#News">News</a></li>
             <li> <a href="#Gameplay">Gameplay</a>
@@ -495,7 +497,21 @@
                 overlay.classList.remove('on');
             }
         }
-
+        var marker = document.querySelector('#marker')
+        var item = document.querySelectorAll('nav a');
+        function indicator(e) {
+            marker.style.left = e.offsetLeft + "px";
+            marker.style.width = e.offsetWidth + "px";
+        }
+        item.forEach(link => {
+            link.addEventListener('click', (e) => {
+                indicator(e.target);
+            })
+        })
+        var item2 = document.querySelectorAll('li a');
+        item2.onclick = function () {
+            item2.classList.toggle('color-on');
+        }
     </script>
 
 
